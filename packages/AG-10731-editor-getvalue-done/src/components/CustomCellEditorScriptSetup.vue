@@ -1,5 +1,5 @@
 <template>
-  <input v-model="value" />
+    <input id="goldeditor" v-model="value" />
 </template>
 
 <script setup>
@@ -19,8 +19,7 @@ const value = ref(props.params.value);
 
 // AgGrid callbacks
 const getValue = () => {
-  console.log("getValue", value.value);
-  return Number(value.value);
+  return Number(value.value * 2);
 };
 
 const isCancelBeforeStart = () => {

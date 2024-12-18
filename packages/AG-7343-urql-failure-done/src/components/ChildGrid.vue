@@ -4,8 +4,8 @@
     style="height: 500px; width: 97vw"
     :columnDefs="columnDefs.value"
     :defaultColDef="defaultColDef"
+    animateRows="true"
     :rowData="data"
-    theme="legacy"
     @grid-ready="onGridReady"
   />
 </template>

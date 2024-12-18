@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/AG-7343-urlql" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/packages/AG-11496" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/packages/AG-11496-nuxtjs-async" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/packages/AG-7343-urlql" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/packages/AG-7343-urql-failure" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/packages/ag-grid-urql-failure" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/packages/ag-grid-vue3" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/packages/ts-bug-repro" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/t/AG-11496-nuxtjs-async" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/t/AG-7343-urlql" vcs="Git" />
+  </component>
+</project>

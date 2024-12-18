@@ -1,0 +1,58 @@
+<script setup lang="ts">
+import {computed, nextTick, onMounted, ref, toRefs, useTemplateRef} from "vue";
+import type {ICellEditorParams} from "ag-grid-community";
+
+const props = defineProps<{ params: ICellEditorParams }>();
+
+const input = useTemplateRef('my-input')
+
+const getInitialValue = () => {
+  let startValue = props.params.value;
+
+  const eventKey = props.params.eventKey;
+  const isBackspace = eventKey === 'Backspace';
+
+  if (isBackspace) {
+    startValue = '';
+  } else if (eventKey && eventKey.length === 1) {
+    startValue = eventKey;
+  }
+
+  if (startValue !== null && startValue !== undefined) {
+    return startValue;
+  }
+}
+
+const value = ref(getInitialValue())
+
+const getValue = () =>{
+  return value.value;
+}
+
+onMounted(() => {
+  nextTick(() => {
+    input.value!.focus();
+  });
+})
+
+defineExpose({
+  getValue
+})
+
+</script>
+
+<template>
+  <span class="imgSpan">
+      <input v-model="value" ref="my-input" class="my-simple-editor" />
+  </span>
+</template>
+
+<style>
+.my-simple-editor {
+  box-sizing: border-box;
+  padding-left: var(--ag-grid-size);
+  width: 100%;
+  height: 100%;
+}
+</style>
+

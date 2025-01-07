@@ -28,7 +28,6 @@ export default {
         };
     },
     beforeMount() {
-        debugger
         this.gridOptions = {};
         this.colDefs = [
             { field: 'callId' },

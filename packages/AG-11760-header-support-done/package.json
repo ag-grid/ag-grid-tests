@@ -5,14 +5,13 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc && vite build",
+    "build": "vue-tsc && vite build --base=/packages/AG-11760-header-support-done/dist/",
     "preview": "vite preview"
   },
   "dependencies": {
     "@mobileaction/action-kit": "^1.31.3",
     "add": "^2.0.6",
-    "ag-grid-community": "33.0.1-beta.20241218.0",
-    "ag-grid-vue3": "^31.3.2",
+    "ag-grid-community": "33.0.3",
     "vue": "3.5.0",
     "yarn": "^1.22.22"
   },

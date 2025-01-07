@@ -8,7 +8,7 @@
     "build": "echo \"dummy build\""
   },
   "dependencies": {
-    "ag-grid-community": "33.0.1-beta.20241218.0"
+    "ag-grid-community": "33.0.3"
  },
   "keywords": [],
   "author": "",

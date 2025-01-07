@@ -14,8 +14,8 @@
   },
   "dependencies": {
     "@quasar/extras": "^1.16.4",
-    "ag-grid-community": "33.0.1-beta.20241218.0",
-    "ag-grid-enterprise": "33.0.1-beta.20241218.0",
+    "ag-grid-community": "33.0.3",
+    "ag-grid-enterprise": "33.0.3",
     "quasar": "^2.14.3",
     "vue": "^3.5.11",
     "vue-router": "^4.0.0"

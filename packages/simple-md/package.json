@@ -10,12 +10,12 @@
     "test:unit": "vitest",
     "test:e2e": "start-server-and-test preview http://localhost:4173 'cypress run --e2e'",
     "test:e2e:dev": "start-server-and-test 'vite dev --port 4173' http://localhost:4173 'cypress open --e2e'",
-    "build-only": "vite build",
+    "build-only": "vite build --base=/packages/simple-md/dist/",
     "type-check": "vue-tsc --build --force"
   },
   "dependencies": {
-    "ag-grid-community": "33.0.1-beta.20241218.0",
-    "ag-grid-enterprise": "33.0.1-beta.20241218.0",
+    "ag-grid-community": "33.0.3",
+    "ag-grid-enterprise": "33.0.3",
     "vue": "^3.4.29"
   },
   "devDependencies": {

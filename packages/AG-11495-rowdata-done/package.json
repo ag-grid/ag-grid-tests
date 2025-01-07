@@ -5,11 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc && vite build",
+    "build": "vue-tsc && vite build --base=/packages/AG-11495-rowdata-done/dist/",
     "preview": "vite preview"
   },
   "dependencies": {
-    "ag-grid-community": "33.0.1-beta.20241218.0",
+    "ag-grid-community": "33.0.3",
     "vue": "^3.5.11"
   },
   "devDependencies": {

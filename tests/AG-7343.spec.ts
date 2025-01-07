@@ -13,4 +13,3 @@ test('quasar get value', async ({ page }) => {
 
   expect(await page.getByRole('gridcell').textContent()).toBe('20');
 });
-

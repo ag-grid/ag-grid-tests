@@ -1,45 +1,45 @@
 <script setup lang="ts">
-  import { ref } from 'vue'
- import type { ColDef } from 'ag-grid-community'
-  import { AgGridVue } from 'ag-grid-vue3'
+import {ref} from 'vue'
+import type {ColDef} from 'ag-grid-community'
+import {AllCommunityModule, ModuleRegistry, ValidationModule} from "ag-grid-community";
+import {AllEnterpriseModule} from "ag-grid-enterprise";
+import {AgGridVue} from 'ag-grid-vue3'
 import "ag-grid-community/styles/ag-grid.css" // Mandatory CSS required by the Data Grid
 import "ag-grid-community/styles/ag-theme-quartz.css" // Optional Theme applied to the Data Grid
 
-  import {ClientSideRowModelModule, ValidationModule, ModuleRegistry} from "ag-grid-community";
+ModuleRegistry.registerModules([AllCommunityModule, ValidationModule, AllEnterpriseModule]);
 
-  ModuleRegistry.registerModules([ClientSideRowModelModule, ValidationModule]);
-
-  const context = ref({ })
- const columnDefs = ref<Array<ColDef>>([
-     { headerName: 'Report Date', field: 'reportDate', filter: true, width: 150 },
-     { headerName: 'Location', field: 'updatedLocation', filter: true },
-     { headerName: 'Part Number', field: 'partNumber', filter: true },
-     { headerName: 'Serial Number', field: 'serialNumber', filter: true },
-     { headerName: 'Description', field: 'description', filter: true },
-     { headerName: 'Total Hours', field: 'totalHours', filter: true },
-     { headerName: 'Name', field: 'name', filter: true },
-     { headerName: 'Frequency', field: 'frequency', filter: true },
-     { headerName: 'UOM', field: 'uom', filter: true },
-     { headerName: 'Remaining', field: 'remaining', filter: true },
-     { headerName: 'Remaining UOM', field: 'remainingUom', filter: true },
- ])
- const items = ref([ {
-    "id": 2,
-    "partNumber": "Polaris 800 Crew",
-    "serialNumber": "4XAWH76A8B21706",
-    "description": "shipped to WACO",
-    "totalHours": 2398,
-    "name": "GSE- 6 Month Recurring",
-    "frequency": 6,
-    "uom": "MO",
-    "remaining": 6,
-    "remainingUom": "Months",
-    "location": "Waco Warehouse GSE",
-    "updatedLocation": "AO",
-    "isArchive": false,
-    "missingFromReport": false,
-    "reportDate": "2024-10-20T01:01:02.047"
-  },
+const context = ref({})
+const columnDefs = ref<Array<ColDef>>([
+  {headerName: 'Report Date', field: 'reportDate', filter: true, width: 150},
+  {headerName: 'Location', field: 'updatedLocation', filter: true},
+  {headerName: 'Part Number', field: 'partNumber', filter: true},
+  {headerName: 'Serial Number', field: 'serialNumber', filter: true},
+  {headerName: 'Description', field: 'description', filter: true},
+  {headerName: 'Total Hours', field: 'totalHours', filter: true},
+  {headerName: 'Name', field: 'name', filter: true},
+  {headerName: 'Frequency', field: 'frequency', filter: true},
+  {headerName: 'UOM', field: 'uom', filter: true},
+  {headerName: 'Remaining', field: 'remaining', filter: true},
+  {headerName: 'Remaining UOM', field: 'remainingUom', filter: true},
+])
+const items = ref([{
+  "id": 2,
+  "partNumber": "Polaris 800 Crew",
+  "serialNumber": "4XAWH76A8B21706",
+  "description": "shipped to WACO",
+  "totalHours": 2398,
+  "name": "GSE- 6 Month Recurring",
+  "frequency": 6,
+  "uom": "MO",
+  "remaining": 6,
+  "remainingUom": "Months",
+  "location": "Waco Warehouse GSE",
+  "updatedLocation": "AO",
+  "isArchive": false,
+  "missingFromReport": false,
+  "reportDate": "2024-10-20T01:01:02.047"
+},
   {
     "id": 3,
     "partNumber": "Polaris 800 Crew",
@@ -109,36 +109,37 @@ import "ag-grid-community/styles/ag-theme-quartz.css" // Optional Theme applied 
     "reportDate": "2024-10-20T01:01:02.047"
   }])
 
-  function updateFirst(){
-    console.log(`value before: ${items.value[0].updatedLocation}`)
-items.value[0].updatedLocation = "First Update"
-console.log(`value after: ${items.value[0].updatedLocation}`)
-  }
+function updateFirst() {
+  console.log(`value before: ${items.value[0].updatedLocation}`)
+  items.value[0].updatedLocation = "First Update"
+  console.log(`value after: ${items.value[0].updatedLocation}`)
+}
 
-  function updateSecond(){
-    console.log(`value before: ${items.value[1].updatedLocation}`)
-items.value[1].updatedLocation = "Second Update"
-console.log(`value after: ${items.value[1].updatedLocation}`)
-  }
+function updateSecond() {
+  console.log(`value before: ${items.value[1].updatedLocation}`)
+  items.value[1].updatedLocation = "Second Update"
+  console.log(`value after: ${items.value[1].updatedLocation}`)
+}
 </script>
 
 <template>
- <button type="button" @click="updateFirst">Update First Item</button>
- <button type="button" @click="updateSecond">Update Second Item</button>
+  <button type="button" @click="updateFirst">Update First Item</button>
+  <button type="button" @click="updateSecond">Update Second Item</button>
   <ag-grid-vue class="ag-theme-quartz grid"
-                 :columnDefs="columnDefs"
-                 :context="context"
-                 cellSelection="true"
-                 :rowData="items"
-                >
-    </ag-grid-vue>
- 
+               :columnDefs="columnDefs"
+               :context="context"
+               :cellSelection="true"
+               :rowData="items"
+               theme="legacy"
+  >
+  </ag-grid-vue>
+
 </template>
 
 <style scoped>
 .grid {
-height: 500px;
-width: 1000px;
+  height: 500px;
+  width: 1000px;
 }
 
 header {
@@ -168,3 +169,4 @@ header {
   }
 }
 </style>
+

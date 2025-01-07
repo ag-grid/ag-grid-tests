@@ -14,7 +14,7 @@
     "type-check": "vue-tsc --build --force"
   },
   "dependencies": {
-    "ag-grid-community": "33.0.1-beta.20241218.0",
+    "ag-grid-community": "33.0.3",
     "vue": "^3.5.0"
   },
   "devDependencies": {

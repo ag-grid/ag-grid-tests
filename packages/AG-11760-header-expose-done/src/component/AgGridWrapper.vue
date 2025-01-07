@@ -20,6 +20,7 @@ import "ag-grid-community/styles/ag-theme-alpine.css";
 import { AllCommunityModule } from 'ag-grid-community';
 
 import { AgGridVue } from "ag-grid-vue3";
+// import HeaderComponent from "@/component/HeaderComponent";
 
 const modules = ref([AllCommunityModule]);
 
@@ -35,4 +36,7 @@ const defaultColDef = {
 onMounted(() => {
   console.log("props", props);
 });
+
+// defineExpose({ HeaderComponent });
+
 </script>

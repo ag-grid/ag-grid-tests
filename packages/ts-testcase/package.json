@@ -3,10 +3,11 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "vite build && vue-tsc -p tsconfig.json"
+    "dev": "vite",
+    "build": "vite build --base=/packages/ts-testcase/dist/ && vue-tsc -p tsconfig.json"
   },
   "dependencies": {
-    "ag-grid-community": "33.0.1-beta.20241218.0",
+    "ag-grid-community": "33.0.3",
     "vue": "^3.5.13"
   },
   "devDependencies": {

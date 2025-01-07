@@ -1,6 +1,8 @@
 <template>
+  <div style="height: 500px; box-sizing: border-box">
+  <button @click="onClick" role="button">click</button>
   <ag-grid-vue :columnDefs="columnDefs"
-               v-model="rowData"
+               :rowData="rowData"
                :rowSelection="{
                       mode: 'singleRow',
                       checkboxes: false,
@@ -14,6 +16,7 @@
   >
   </ag-grid-vue>
   {{rowData}}
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -31,36 +34,18 @@ import 'ag-grid-community/styles/ag-theme-quartz.css';
 
 const rowData = ref<any[]>([
   { make: "Tesla", model: "Model Y", price: 64950, electric: true },
-  { make: "Ford", model: "F-Series", price: 33850, electric: false },
-  { make: "Toyota", model: "Corolla", price: 29600, electric: false },
 ])
 
 const columnDefs = ref<ColDef[]>([
     { field: "make", editable: true, cellEditor: 'SimpleEditor'},
     { field: "model", editable: true },
-    { field: "price", editable: true, cellRenderer: 'PriceRenderer' },
-    { field: "electric", editable: true }
+    { field: "price", editable: true, cellRenderer: 'PriceRenderer' }
   ])
 
-// const gridOptions = ref<GridOptions>({
-//   columnDefs: <ColDef[]>[
-//     { field: "make", editable: true, cellEditor: 'SimpleEditor'},
-//     { field: "model", editable: true },
-//     { field: "price", editable: true, cellRenderer: 'PriceRenderer' },
-//     { field: "electric", editable: true }
-//   ]
-// })
 
-onMounted(() => {
-  setTimeout(() => {
-    // rowData.value = [
-    //   { make: "Wibble", model: "Model Y", price: 64950, electric: true },
-    //   { make: "Wobble", model: "F-Series", price: 33850, electric: false },
-    //   { make: "Toyota", model: "Corolla", price: 29600, electric: false },
-    // ]
-    rowData.value.push({ make: "Wibble", model: "Wobble", price: 64950, electric: true },)
-  }, 1000)
-})
+const onClick = () => {
+  rowData.value.push({ make: "Wibble", model: "Wobble", price: 20500, electric: true })
+};
 
 const rowSelected = (event:any) => {
   console.log("cell selected");

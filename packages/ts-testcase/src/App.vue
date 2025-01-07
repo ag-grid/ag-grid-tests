@@ -1,9 +1,11 @@
 <script lang='ts' setup >
 import { ref, shallowRef } from 'vue';
 import { AgGridVue } from 'ag-grid-vue3';
+import { AllCommunityModule, ModuleRegistry } from 'ag-grid-community';
 import type { GridApi, ColDef, GridReadyEvent, GridOptions } from 'ag-grid-community';
 import {IRowNode} from "ag-grid-community";
 
+ModuleRegistry.registerModules([AllCommunityModule])
 type ROW_TYPE = any;
 
 const gridApi = shallowRef<GridApi | null>(null);
@@ -40,7 +42,7 @@ const onGridReady = (params: GridReadyEvent) => {
 </script>
 
 <template>
-  <div style="height: 100%">
+  <div style="height: 300px">
     <AgGridVue
       style="width: 100%; height: 100%;"
       :columnDefs="columnDefs"

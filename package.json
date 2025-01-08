@@ -8,7 +8,7 @@
     "http-server": "14.1.1"
   },
   "scripts": {
-    "bootstrap": "npx lerna bootstrap",
+    "bootstrap": "npx lerna bootstrap --no-ci",
     "build": "npx lerna run build",
     "update-grid-deps": "node versionModules.js `node getLatestGridDep.js` x",
     "start-server": "http-server . &",

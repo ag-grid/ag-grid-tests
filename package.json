@@ -4,7 +4,15 @@
   "devDependencies": {
     "@playwright/test": "^1.49.1",
     "@types/node": "^22.10.2",
-    "lerna": "^5.6.2"
+    "lerna": "^5.6.2",
+    "http-server": "14.1.1"
   },
-  "scripts": {}
+  "scripts": {
+    "bootstrap": "npx lerna bootstrap",
+    "build": "npx lerna run build",
+    "update-grid-deps": "node versionModules.js `node getLatestGridDep.js` x",
+    "start-server": "http-server . &",
+    "stop-server": "http-server .",
+    "test": "npx playwright test --reporter=list"
+  }
 }

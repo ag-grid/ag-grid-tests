@@ -5,6 +5,8 @@
   },
   "dependencies": {
     "vue": "^3.5.0",
-    "ag-grid-community": "33.0.2"
-  }
+    "ag-grid-community": "33.0.1-beta.20250108.1",
+    "ag-grid-vue3": "33.0.1-beta.20250108.1"
+  },
+  "version": "33.0.1-beta.20250108.1"
 }

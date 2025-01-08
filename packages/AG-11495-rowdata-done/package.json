@@ -1,7 +1,7 @@
 {
   "name": "vue-vite-rowdata",
   "private": true,
-  "version": "0.0.0",
+  "version": "33.0.1-beta.20250108.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -9,7 +9,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "ag-grid-community": "33.0.3",
+    "ag-grid-community": "33.0.1-beta.20250108.1",
+    "ag-grid-vue3": "33.0.1-beta.20250108.1",
     "vue": "^3.5.11"
   },
   "devDependencies": {

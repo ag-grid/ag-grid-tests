@@ -8,7 +8,7 @@ test('header components exposed render', async ({ page }) => {
     }
   })
 
-  await page.goto('http://127.0.0.1:8080/packages/AG-11760-header-expose-done/dist/');
+  await page.goto('http://127.0.0.1:8085/packages/AG-11760-header-expose-done/dist/');
 
   await expect(page.getByRole('row')).toHaveCount(2);
   await expect(page.getByRole('gridcell')).toHaveCount(2);

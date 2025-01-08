@@ -10,7 +10,7 @@ test('v-model reactivity', async ({ page }) => {
     }
   })
 
-  await page.goto('http://127.0.0.1:8080/packages/simple-v-model-reactivity/dist/');
+  await page.goto('http://127.0.0.1:8085/packages/simple-v-model-reactivity/dist/');
 
   // should start off with one row
   await expect(page.getByRole('gridcell')).toHaveCount(2);

@@ -8,7 +8,7 @@ test('ensure no v-model/rowdata error message', async ({ page }) => {
     }
   })
 
-  await page.goto('http://127.0.0.1:8080/packages/AG-11495-rowdata-done/dist/');
+  await page.goto('http://127.0.0.1:8085/packages/AG-11495-rowdata-done/dist/');
 
   await expect(page.getByRole('row')).toHaveCount(4);
   await expect(page.getByRole('gridcell')).toHaveCount(12);

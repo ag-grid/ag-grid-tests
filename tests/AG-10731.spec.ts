@@ -8,7 +8,7 @@ test('urlql master detail', async ({ page }) => {
     }
   })
 
-  await page.goto('http://127.0.0.1:8080/packages/AG-7343-urql-failure-done/dist/');
+  await page.goto('http://127.0.0.1:8085/packages/AG-7343-urql-failure-done/dist/');
 
   const element = page.locator('[class="ag-icon ag-icon-tree-closed"]').first();
   await element.click();

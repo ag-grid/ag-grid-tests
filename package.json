@@ -12,7 +12,7 @@
     "build": "npx lerna run build",
     "update-grid-deps": "node versionModules.js `node getLatestGridDep.js` x",
     "start-server": "http-server . &",
-    "stop-server": "http-server .",
+    "stop-server": "killall http-server",
     "test": "npx playwright test --reporter=list"
   }
 }

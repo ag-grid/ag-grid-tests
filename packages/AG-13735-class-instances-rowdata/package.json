@@ -1,0 +1,10 @@
+{
+  "name": "ag-grid-example",
+  "scripts": {
+    "build": "echo \"fake build\""
+  },
+  "dependencies": {
+    "vue": "^3.5.0",
+    "ag-grid-community": "33.0.2"
+  }
+}

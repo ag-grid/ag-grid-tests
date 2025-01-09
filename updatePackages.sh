@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-for subDirectory in ./packages/*;
+for subDirectory in ./vue3/*;
 do
   cd $subDirectory
   pwd

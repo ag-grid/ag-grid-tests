@@ -11,24 +11,26 @@ const getDirectories = source =>
         .filter(dirent => dirent.isDirectory())
         .map(dirent => `${source}/${dirent.name}`)
 
-const packageDirectories = getDirectories("./packages")
+const packageDirectories = require('./lerna.json').packages.map(package => package.replace('/*', ''))
+    .map(getDirectories)
+    .flat();
 
-if (process.argv.length < 4) {
-    console.log('Usage: node scripts/deployments/versionModules.js [Grid Version] [Charts Version]');
-    console.log('For example: node scripts/deployments/versionModules.js 19.1.0 1.0.0');
+if (process.argv.length < 3) {
+    console.log('Usage: node scripts/deployments/versionModules.js [Grid Version]');
+    console.log('For example: node scripts/deployments/versionModules.js 19.1.0');
     console.log('Note: This script should be run from the root of the monorepo');
     process.exit(1);
 }
 
-const [exec, scriptPath, gridNewVersion, chartsDependencyVersion] = process.argv;
+const [exec, scriptPath, gridNewVersion] = process.argv;
 
-if (!gridNewVersion || !chartsDependencyVersion) {
+if (!gridNewVersion) {
     console.error('ERROR: Invalid grid or charts version supplied');
     process.exit(1);
 }
 
 console.log('************************************************************************************************');
-console.log(`Setting Grid Version to ${gridNewVersion} and Charts Version to ${chartsDependencyVersion}      `);
+console.log(`Setting Grid Version to ${gridNewVersion}                                                       `);
 console.log('************************************************************************************************');
 
 function main() {
@@ -88,22 +90,22 @@ function updateVersion(packageJson) {
 }
 
 function updateDependencies(fileContents) {
-    return updateDependency(fileContents, 'dependencies', gridNewVersion, chartsDependencyVersion);
+    return updateDependency(fileContents, 'dependencies', gridNewVersion);
 }
 
 function updateDevDependencies(fileContents) {
-    return updateDependency(fileContents, 'devDependencies', gridNewVersion, chartsDependencyVersion);
+    return updateDependency(fileContents, 'devDependencies', gridNewVersion);
 }
 
 function updatePeerDependencies(fileContents) {
-    return updateDependency(fileContents, 'peerDependencies', gridNewVersion, chartsDependencyVersion);
+    return updateDependency(fileContents, 'peerDependencies', gridNewVersion);
 }
 
 function updateOptionalDependencies(fileContents) {
-    return updateDependency(fileContents, 'optionalDependencies', gridNewVersion, chartsDependencyVersion);
+    return updateDependency(fileContents, 'optionalDependencies', gridNewVersion);
 }
 
-function updateDependency(fileContents, property, dependencyVersion, chartsDependencyVersion) {
+function updateDependency(fileContents, property, dependencyVersion) {
     if (!fileContents[property]) {
         return fileContents;
     }
@@ -119,11 +121,7 @@ function updateDependency(fileContents, property, dependencyVersion, chartsDepen
         .filter(([key, value]) => gridDependency(key) || chartDependency(key))
         .filter(([key, value]) => key !== 'ag-grid-testing')
         .forEach(([key, value]) => {
-            if (chartsDependencyVersion) {
-                dependencyContents[key] = chartDependency(key) ? chartsDependencyVersion : dependencyVersion;
-            } else {
-                dependencyContents[key] = dependencyVersion;
-            }
+            dependencyContents[key] = dependencyVersion;
         });
 
     return fileContents;

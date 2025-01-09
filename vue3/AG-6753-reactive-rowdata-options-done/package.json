@@ -1,0 +1,17 @@
+{
+  "name": "ag-6753-reactive-rowdata",
+  "version": "33.0.1-beta.20250108.1947",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "echo \"dummy build\""
+  },
+  "dependencies": {
+    "ag-grid-community": "33.0.1-beta.20250108.1947",
+    "ag-grid-vue3": "33.0.1-beta.20250108.1947"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

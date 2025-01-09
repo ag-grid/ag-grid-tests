@@ -10,9 +10,10 @@
   "scripts": {
     "bootstrap": "npx lerna bootstrap --no-ci",
     "build": "npx lerna run build",
-    "update-grid-deps": "node versionModules.js `node getLatestGridDep.js` x",
+    "update-grid-deps": "node versionModules.js `node getLatestGridDep.js`",
     "start-server": "nohup http-server -p 8085 . > http.log 2>&1 & echo $! > pid",
     "stop-server": "kill -9 `cat pid` 2> /dev/null",
-    "test": "npx playwright test --reporter=list"
+    "test": "npx playwright test --reporter=list",
+    "init": "npm run update-grid-deps && npm run bootstrap"
   }
 }

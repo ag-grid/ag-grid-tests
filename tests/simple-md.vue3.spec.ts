@@ -1,6 +1,8 @@
 import { test, expect } from '@playwright/test';
 
 test('header components exposed render', async ({ page }) => {
+  test.setTimeout(5_000);
+
   await page.goto('http://127.0.0.1:8085/vue3/simple-md/dist/');
 
   await expect(page.getByRole('row')).toHaveCount(2);

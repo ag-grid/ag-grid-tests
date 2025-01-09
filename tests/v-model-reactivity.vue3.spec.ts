@@ -21,10 +21,6 @@ test('v-model reactivity', async ({ page }) => {
 
   expect(await page.getByRole('gridcell').last().textContent()).toBe('row 2 new col1');
 
-  // when the first cell is clicked a third row should be added
-  // await page.getByRole('gridcell').first().click();
-  // await expect(page.getByRole('gridcell')).toHaveCount(3);
-
   expect(errorLogs.length).toEqual(0);
 });
 

@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc && vite build --base=/vue3/AG-11760-header-support-done/dist/",
+    "build": "vue-tsc && vite build --base=/vue3/AG-11760-header-support/dist/",
     "preview": "vite preview"
   },
   "dependencies": {

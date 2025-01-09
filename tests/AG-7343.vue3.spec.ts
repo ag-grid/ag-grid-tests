@@ -3,7 +3,7 @@ import { test, expect } from '@playwright/test';
 test('quasar get value', async ({ page }) => {
   test.setTimeout(5_000);
 
-  await page.goto('http://localhost:8085/vue3/AG-10731-editor-getvalue-done/dist/spa/#/');
+  await page.goto('http://localhost:8085/vue3/AG-10731-editor-getvalue/dist/spa/#/');
 
   await page.getByRole('gridcell').dblclick()
 

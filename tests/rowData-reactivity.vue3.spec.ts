@@ -24,9 +24,6 @@ test('rowData reactivity', async ({ page }) => {
 
   await page.waitForTimeout(2000); // waits for 2 seconds
 
-  // const lastCell = page.locator('.ag-cell-value').last();
-  // await lastCell.waitFor();
-
   expect(await page.getByRole('gridcell')).toHaveCount(6);
   expect(await page.getByRole('gridcell').nth(3).textContent()).toBe("Wibble");
   expect(await page.getByRole('gridcell').locator('.priceIcon').count()).toBe(8);

@@ -67,7 +67,7 @@ module.exports = configure(function (/* ctx */) {
 
       // rebuildCache: true, // rebuilds Vite/linter/etc cache on startup
 
-      publicPath: 'http://localhost:8085/vue3/AG-10731-editor-getvalue-done/dist/spa/',
+      publicPath: 'http://localhost:8085/vue3/AG-10731-editor-getvalue/dist/spa/',
       // analyze: true,
       // env: {},
       // rawDefine: {}

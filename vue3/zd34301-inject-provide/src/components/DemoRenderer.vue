@@ -13,5 +13,5 @@ const state = inject('state');
 </script>
 
 <template>
-  <span>{{ state.lastLoaded }} {{ someValue }}</span>
+    <p style="display: inline"><span id="grid-cell-renderer">{{ state.lastLoaded }}</span> <span>{{ someValue }}</span></p>
 </template>

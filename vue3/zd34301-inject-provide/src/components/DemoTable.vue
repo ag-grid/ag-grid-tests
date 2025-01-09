@@ -36,7 +36,7 @@ provide('state', state);
 </script>
 
 <template>
-  <p>Time in DemoTable: {{ dateInDemoTable }} {{ someValue }}</p>
+  <p>Time in DemoTable: <span id="table-timestamp">{{ dateInDemoTable }}</span> {{ someValue }}</p>
   <AgGridVue
     :grid-options="gridOptions"
     :row-data="rowData"

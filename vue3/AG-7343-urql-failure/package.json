@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc --noEmit && vite build --base=/vue3/AG-7343-urql-failure-done/dist/",
+    "build": "vue-tsc --noEmit && vite build --base=/vue3/AG-7343-urql-failure/dist/",
     "preview": "vite preview",
     "test": "vitest"
   },

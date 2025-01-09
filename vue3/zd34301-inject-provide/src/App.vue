@@ -16,8 +16,8 @@ function mount() {
 </script>
 
 <template>
-  <button type="button" @click="unmount">Unmount table</button>
-  <button type="button" @click="mount">Mount table</button>
+  <button type="button" @click="unmount" id="unmount">Unmount table</button>
+  <button type="button" @click="mount" id="mount">Mount table</button>
   <WrappedOne v-if="isMounted" />
   <WrappedTwo v-if="isMounted" />
 </template>

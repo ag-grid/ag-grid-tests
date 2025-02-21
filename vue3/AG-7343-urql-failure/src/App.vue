@@ -20,11 +20,9 @@ import ChildGrid from './components/ChildGrid.vue';
 
 import { AllCommunityModule } from 'ag-grid-community';
 import { ModuleRegistry } from 'ag-grid-community';
-import { ColumnsToolPanelModule } from 'ag-grid-enterprise';
-import { MasterDetailModule } from 'ag-grid-enterprise';
-import { MenuModule } from 'ag-grid-enterprise';
+import { AllEnterpriseModule } from 'ag-grid-enterprise';
 
-ModuleRegistry.registerModules([AllCommunityModule, MasterDetailModule, MenuModule, ColumnsToolPanelModule]);
+ModuleRegistry.registerModules([AllCommunityModule, AllEnterpriseModule]);
 
 const client = createClient({
   url: 'https://api.spacex.land/graphql/',

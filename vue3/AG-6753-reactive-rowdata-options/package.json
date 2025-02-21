@@ -1,6 +1,6 @@
 {
-  "name": "ag-6753-reactive-rowdata",
-  "version": "33.0.1-beta.20250108.1947",
+  "name": "AG-6753-reactive-rowdata-options",
+  "version": "33.1.1-beta.20250221.0",
   "description": "",
   "main": "main.js",
   "scripts": {
@@ -8,8 +8,8 @@
     "build": "echo \"dummy build\""
   },
   "dependencies": {
-    "ag-grid-community": "33.0.1-beta.20250108.1947",
-    "ag-grid-vue3": "33.0.1-beta.20250108.1947"
+    "ag-grid-community": "33.1.1-beta.20250221.0",
+    "ag-grid-vue3": "33.1.1-beta.20250221.0"
   },
   "keywords": [],
   "author": "",

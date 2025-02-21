@@ -1,7 +1,7 @@
 {
   "name": "vue-vite",
   "private": true,
-  "version": "33.0.1-beta.20250108.1947",
+  "version": "33.1.1-beta.20250221.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -11,8 +11,8 @@
   "dependencies": {
     "@mobileaction/action-kit": "^1.31.3",
     "add": "^2.0.6",
-    "ag-grid-community": "33.0.1-beta.20250108.1947",
-    "ag-grid-vue3": "33.0.1-beta.20250108.1947",
+    "ag-grid-community": "33.1.1-beta.20250221.0",
+    "ag-grid-vue3": "33.1.1-beta.20250221.0",
     "vue": "3.5.0",
     "yarn": "^1.22.22"
   },

@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-test('rowData is reactive', async ({ page }) => {
+test('AG-6753 rowData is reactive', async ({ page }) => {
   const errorLogs = []
   page.on("console", (message) => {
     if (message.type() === "error") {

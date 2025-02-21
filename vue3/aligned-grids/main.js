@@ -1,10 +1,9 @@
 import { createApp } from 'vue';
 
-import { ClientSideRowModelModule } from 'ag-grid-community';
 import { AllCommunityModule, ModuleRegistry } from 'ag-grid-community';
 import { AgGridVue } from 'ag-grid-vue3';
 
-ModuleRegistry.registerModules([AllCommunityModule, ClientSideRowModelModule]);
+ModuleRegistry.registerModules([AllCommunityModule]);
 
 const VueExample = {
   template: `

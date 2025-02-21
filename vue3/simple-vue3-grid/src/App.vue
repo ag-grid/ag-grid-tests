@@ -1,4 +1,7 @@
 <template>
+  <div>1 rows should render with the price having customer £ icon renderer</div>
+  <div>when the button is clicked new row should be added</div>
+  <div>the json below the table should match the row data (except for price which will be a number in the json)</div>
   <div style="height: 500px; box-sizing: border-box">
   <button @click="onClick" role="button">click</button>
   <ag-grid-vue :columnDefs="columnDefs"

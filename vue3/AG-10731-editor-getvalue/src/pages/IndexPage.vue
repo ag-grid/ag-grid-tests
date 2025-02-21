@@ -1,9 +1,10 @@
 <template>
-  <button @click="reRenderGrid">Rerender Grid</button>
-  <button @click="clearTempState">Clear Temp State</button>
-  <button @click="expandAll">Expand All</button>
-  <button @click="collapseAll">Collapse All</button>
+<!--  <button @click="reRenderGrid">Rerender Grid</button>-->
+<!--  <button @click="clearTempState">Clear Temp State</button>-->
+<!--  <button @click="expandAll">Expand All</button>-->
+<!--  <button @click="collapseAll">Collapse All</button>-->
 
+  <div>Edit cell value - new value should be double the value entered</div>
   <ag-grid-vue
     v-if="isVisible"
     :style="{

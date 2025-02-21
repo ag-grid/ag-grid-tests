@@ -1,6 +1,5 @@
 // Note: Assumes working directory is the root of the mono-repo
 const fs = require('fs');
-const path = require('path');
 const pipe =
     (...fns) =>
         (x) =>
@@ -45,11 +44,8 @@ function updatePackageJsonFiles() {
     packageDirectories.forEach((packageDirectory) => {
         // update all package.json files
         const packageJsonFile = `${CWD}/${packageDirectory}/package.json`;
+        console.log(`${CWD}/${packageDirectory}/package.json`);
         updateFileWithNewVersions(packageJsonFile);
-
-        // update version.ts file
-        const currentVersionFile = `${CWD}/${packageDirectory}/src/version.ts`;
-        updateVersionFile(currentVersionFile);
     });
 }
 

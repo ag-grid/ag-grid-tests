@@ -10,7 +10,7 @@ test('rowData is reactive', async ({ page }) => {
     }
   })
 
-  await page.goto('http://127.0.0.1:8085/vue3/AG-13735-class-instances-rowdata//');
+  await page.goto('http://127.0.0.1:8085/vue3/AG-13735-class-instances-rowdata/');
 
   await expect(page.getByRole('gridcell')).toHaveCount(3);
 

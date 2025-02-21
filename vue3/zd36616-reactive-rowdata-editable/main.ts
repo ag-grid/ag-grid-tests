@@ -10,30 +10,24 @@ const VueExample = {
     template: `
         
             <ag-grid-vue
-                style="width: 100%; height: 100%;"
+                style="width: 100%; height: 500px;"
                 class="ag-theme-alpine"
                 :columnDefs="columnDefs"
-                :rowData="rowData"
-                theme="legacy"
-                @cell-clicked="onCellClicked"></ag-grid-vue>
+                v-model="rowData"
+                theme="legacy"></ag-grid-vue>
+                <span aria-label="value">{{rowData[0].value}}</span>
        
     `,
     components: {
         'ag-grid-vue': AgGridVue,
     },
     setup() {
-        const columnDefs = ref([{field: 'value'}]);
-        const rowData = reactive([{value: 2}]);
+        const columnDefs = ref([{field: 'value', editable: true}]);
+        const rowData = ref([{value: 2}]);
 
-        const onCellClicked = (params) => {
-            rowData.push({value: Math.floor(Math.random() * 10) + 3});
-        };
-
-        // expose to template and other options API hooks
         return {
             columnDefs,
-            rowData,
-            onCellClicked,
+            rowData
         };
     },
 };

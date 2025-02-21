@@ -23,7 +23,6 @@ const MissionRenderer = {
   setup(props) {
     const cellValue = props.params.value.getName();
 
-
     const cellValueLowerCase = cellValue.toLowerCase();
     return {
       cellValue,
@@ -72,8 +71,7 @@ const App = defineComponent({
       {
         field: "mission",
         width: 150,
-        cellRenderer: "missionRenderer",
-        valueFormatter: (value) => 'wibble' // to be removed
+        cellRenderer: "missionRenderer"
       },
     ]);
 

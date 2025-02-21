@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Vue 3 example</title>
+		<meta charSet="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<style media="only screen">
+            html, body, #app {
+                height: 100%;
+                width: 100%;
+                margin: 0;
+                box-sizing: border-box;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            html {
+                position: absolute;
+                top: 0;
+                left: 0;
+                padding: 0;
+                overflow: auto;
+            }
+
+            body {
+                padding: 1rem;
+                overflow: auto;
+            }
+        </style>
+	</head>
+	<body>
+		<div>Edit cell value - new value should be in grid and below grid</div>
+		<div id="app">
+			<my-component>Loading Vue 3 example&hellip;</my-component>
+		</div>
+		<script>
+            var appLocation = './';
+            var boilerplatePath = '';
+            var systemJsMap = {
+                "ag-grid-community": "./node_modules/ag-grid-community/",
+                "ag-grid-vue3": "./node_modules/ag-grid-vue3/"
+            };
+            var systemJsPaths = {
+            };
+        </script>
+        <script src="https://unpkg.com/systemjs@0.19.47/dist/system.js">
+		</script>
+		<script src="systemjs.config.js">
+		</script>
+		<script>System.import('./main.ts').catch(function(err) { console.error(err); });</script>
+	</body>
+</html>

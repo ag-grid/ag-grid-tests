@@ -1,5 +1,6 @@
 OLD=`pwd`
-cd /Users/seanlandsman/dev/ag-grid/latest
+SOURCE=/Users/seanlandsman/dev/ag-grid/clean-latest
+cd $SOURCE
 nx build ag-grid-vue3
 
 if [ $? -ne 0 ];
@@ -11,6 +12,6 @@ cd $OLD
 rm -rf .quasar dist
 rm -rf node_modules/ag-grid-vue3
 mkdir -p node_modules/ag-grid-vue3
-cp -R /Users/seanlandsman/dev/ag-grid/latest/vue3/ag-grid-vue3/dist node_modules/ag-grid-vue3/
-cp -R /Users/seanlandsman/dev/ag-grid/latest/vue3/ag-grid-vue3/package.json node_modules/ag-grid-vue3/
+cp -R $SOURCE/packages/ag-grid-vue3/dist node_modules/ag-grid-vue3/
+cp -R $SOURCE/packages/ag-grid-vue3/package.json node_modules/ag-grid-vue3/
 npm run build

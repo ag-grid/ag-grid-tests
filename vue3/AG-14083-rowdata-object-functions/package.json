@@ -1,11 +1,11 @@
 {
-  "name": "multiple-roots",
+  "name": "AG-14083-rowdata-object-functions",
   "version": "33.1.1-beta.20250221.0",
   "description": "",
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "echo \"fake build\""
+    "build": "echo \"dummy build\""
   },
   "dependencies": {
     "ag-grid-community": "33.1.1-beta.20250221.0",

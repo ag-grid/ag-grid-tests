@@ -1,19 +1,15 @@
 import { test, expect } from '@playwright/test';
 
-test('urlql master detail', async ({ page }) => {
-  const errorLogs = []
-  page.on("console", (message) => {
-    if (message.type() === "error") {
-      errorLogs.push(message.text())
-    }
-  })
+test('quasar get value', async ({ page }) => {
+  test.setTimeout(5_000);
 
-  await page.goto('http://127.0.0.1:8085/vue3/AG-7343-urql-failure/dist/');
+  await page.goto('http://localhost:8085/vue3/AG-10731-editor-getvalue/dist/spa/#/');
 
-  const element = page.locator('[class="ag-icon ag-icon-tree-closed"]').first();
-  await element.click();
+  await page.getByRole('gridcell').dblclick()
 
-  const matchingErrors = errorLogs.some(errorLog => errorLog.includes('No urql Client was provided'))
-  expect(matchingErrors).toBeFalsy();
+  await expect(page.locator("#goldeditor")).toBeVisible();
+  await page.locator("#goldeditor").fill('10')
+  await page.locator("#goldeditor").press('Enter');
+
+  expect(await page.getByRole('gridcell').textContent()).toBe('20');
 });
-

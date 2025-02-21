@@ -1,18 +1,15 @@
 import { createApp } from 'vue';
 
 import type {GridApi} from 'ag-grid-community';
-import {AllCommunityModule} from 'ag-grid-community';
-import { ModuleRegistry } from 'ag-grid-community';
-import { ColumnsToolPanelModule } from 'ag-grid-enterprise';
-import { MasterDetailModule } from 'ag-grid-enterprise';
-import { MenuModule } from 'ag-grid-enterprise';
+import { AllCommunityModule, ModuleRegistry } from 'ag-grid-community';
+import { AllEnterpriseModule } from 'ag-grid-enterprise';
 import { AgGridVue } from 'ag-grid-vue3';
 
 import DetailCellRenderer from './detailCellRendererVue.js';
 import  { data } from "./data"
 import './styles.css';
 
-ModuleRegistry.registerModules([AllCommunityModule, MasterDetailModule, MenuModule, ColumnsToolPanelModule]);
+ModuleRegistry.registerModules([AllCommunityModule, AllEnterpriseModule]);
 
 export const App = {
   template: `

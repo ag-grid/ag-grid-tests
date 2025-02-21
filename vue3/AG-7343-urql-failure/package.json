@@ -1,7 +1,7 @@
 {
   "name": "ag-grid-happy-dom",
   "private": true,
-  "version": "33.0.1-beta.20250108.1947",
+  "version": "33.1.1-beta.20250221.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -14,9 +14,9 @@
     "@urql/vue": "1.0.2",
     "@vue/eslint-config-airbnb-with-typescript": "7.0.0",
     "@vue/tsconfig": "0.1.3",
-    "ag-grid-community": "33.0.1-beta.20250108.1947",
-    "ag-grid-enterprise": "33.0.1-beta.20250108.1947",
-    "ag-grid-vue3": "33.0.1-beta.20250108.1947",
+    "ag-grid-community": "33.1.1-beta.20250221.0",
+    "ag-grid-enterprise": "33.1.1-beta.20250221.0",
+    "ag-grid-vue3": "33.1.1-beta.20250221.0",
     "eslint": "8.22.0",
     "eslint-plugin-vue": "9.4.0",
     "graphql": "16.6.0",

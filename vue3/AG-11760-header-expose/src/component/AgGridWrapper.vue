@@ -1,6 +1,6 @@
 <template>
   <div style="margin-top: 10px">
-    <h1>AgGrid Wrapper with Custom Header Component</h1>
+    <div>Headers should render with a customer header component - with a star and name</div>
     <ag-grid-vue
       :columnDefs="columns"
       :rowData="rows"

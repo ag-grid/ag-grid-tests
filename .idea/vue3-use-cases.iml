@@ -2,7 +2,27 @@
 <module type="JAVA_MODULE" version="4">
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
-    <content url="file://$MODULE_DIR$" />
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/vue3/AG-7343-urql-failure/dist" />
+    <excludeFolder url="file://$MODULE_DIR$/vue3/AG-6753-reactive-rowdata-options/dist" />
+    <excludeFolder url="file://$MODULE_DIR$/vue3/AG-7343-urql-failure/dist" />
+    <excludeFolder url="file://$MODULE_DIR$/vue3/AG-10731-editor-getvalue/dist" />
+    <excludeFolder url="file://$MODULE_DIR$/vue3/AG-10731-editor-getvalue/.quasar" />
+    <excludeFolder url="file://$MODULE_DIR$/vue3/AG-11495-rowdata/dist" />
+    <excludeFolder url="file://$MODULE_DIR$/vue3/AG-11760-header-expose/dist" />
+    <excludeFolder url="file://$MODULE_DIR$/vue3/AG-11760-header-support/dist" />
+    <excludeFolder url="file://$MODULE_DIR$/vue3/AG-13735-class-instances-rowdata/dist" />
+    <excludeFolder url="file://$MODULE_DIR$/vue3/AG-14083-rowdata-object-functions/dist" />
+    <excludeFolder url="file://$MODULE_DIR$/vue3/AG-14134-class-instance-rowdata/dist" />
+    <excludeFolder url="file://$MODULE_DIR$/vue3/aligned-grids/dist" />
+    <excludeFolder url="file://$MODULE_DIR$/vue3/simple-md/dist" />
+    <excludeFolder url="file://$MODULE_DIR$/vue3/simple-v-model-reactivity/dist" />
+    <excludeFolder url="file://$MODULE_DIR$/vue3/simple-vue3-grid/dist" />
+    <excludeFolder url="file://$MODULE_DIR$/vue3/ts-testcase/dist" />
+    <excludeFolder url="file://$MODULE_DIR$/vue3/zd34301-inject-provide/dist" />
+    <excludeFolder url="file://$MODULE_DIR$/vue3/zd35354-row-data-reactivity/dist" />
+    <excludeFolder url="file://$MODULE_DIR$/vue3/zd36616-reactive-rowdata-editable/dist" />
+    </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>

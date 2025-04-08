@@ -1,5 +1,5 @@
 OLD=`pwd`
-SOURCE=/Users/seanlandsman/dev/ag-grid/clean-latest
+SOURCE=/Users/seanlandsman/dev/ag-grid/latest
 cd $SOURCE
 nx build ag-grid-vue3
 

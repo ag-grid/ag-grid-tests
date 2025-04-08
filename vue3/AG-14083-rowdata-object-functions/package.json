@@ -1,6 +1,6 @@
 {
   "name": "AG-14083-rowdata-object-functions",
-  "version": "33.1.1-beta.20250221.0",
+  "version": "33.2.1-beta.20250407.2300",
   "description": "",
   "main": "main.js",
   "scripts": {
@@ -8,8 +8,8 @@
     "build": "echo \"dummy build\""
   },
   "dependencies": {
-    "ag-grid-community": "33.1.1-beta.20250221.0",
-    "ag-grid-vue3": "33.1.1-beta.20250221.0"
+    "ag-grid-community": "33.2.1-beta.20250407.2300",
+    "ag-grid-vue3": "33.2.1-beta.20250407.2300"
   },
   "keywords": [],
   "author": "",

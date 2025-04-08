@@ -1,6 +1,6 @@
 {
   "name": "aggridsample",
-  "version": "33.1.1-beta.20250221.0",
+  "version": "33.2.1-beta.20250407.2300",
   "private": true,
   "type": "module",
   "scripts": {
@@ -12,9 +12,9 @@
   },
   "dependencies": {
     "vue": "^3.3.11",
-    "ag-grid-community": "33.1.1-beta.20250221.0",
-    "ag-grid-enterprise": "33.1.1-beta.20250221.0",
-    "ag-grid-vue3": "33.1.1-beta.20250221.0"
+    "ag-grid-community": "33.2.1-beta.20250407.2300",
+    "ag-grid-enterprise": "33.2.1-beta.20250407.2300",
+    "ag-grid-vue3": "33.2.1-beta.20250407.2300"
   },
   "devDependencies": {
     "@tsconfig/node18": "^18.2.2",

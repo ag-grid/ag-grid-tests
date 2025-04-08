@@ -14,6 +14,7 @@
     "start-server": "nohup http-server -p 8085 . > http.log 2>&1 & echo $! > pid",
     "stop-server": "kill -9 `cat pid` 2> /dev/null",
     "test": "npx playwright test --reporter=list",
-    "init": "npm run update-grid-deps && npm run bootstrap"
+    "init": "npm run update-grid-deps && npm run bootstrap",
+    "install-chromium": "npx playwright install --with-deps chromium"
   }
 }

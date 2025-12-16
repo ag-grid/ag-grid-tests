@@ -18,9 +18,9 @@ test('v-model reactivity', async ({ page }) => {
   expect(await page.getByRole('gridcell').last().textContent()).toBe('row 2 col1');
 
   await page.getByRole('button').click();
+  await page.waitForTimeout(50);
 
   expect(await page.getByRole('gridcell').last().textContent()).toBe('row 2 new col1');
 
   expect(errorLogs.length).toEqual(0);
 });
-

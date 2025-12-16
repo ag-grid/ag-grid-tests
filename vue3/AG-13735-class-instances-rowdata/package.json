@@ -1,12 +1,12 @@
 {
-  "name": "ag-grid-example",
+  "name": "class-instances-rowdata",
   "scripts": {
     "build": "echo \"fake build\""
   },
   "dependencies": {
     "vue": "^3.5.0",
-    "ag-grid-community": "33.2.1-beta.20250407.2300",
-    "ag-grid-vue3": "33.2.1-beta.20250407.2300"
+    "ag-grid-community": "35.0.0-beta.20251215.1749",
+    "ag-grid-vue3": "35.0.0-beta.20251215.1749"
   },
-  "version": "33.2.1-beta.20250407.2300"
+  "version": "35.0.0-beta.20251215.1749"
 }

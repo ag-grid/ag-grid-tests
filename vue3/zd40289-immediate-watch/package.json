@@ -1,0 +1,16 @@
+{
+  "name": "immediate-watch-update",
+  "scripts": {
+    "build": "echo \"dummy build\""
+  },
+  "dependencies": {
+    "vue": "^3.5.0",
+    "ag-grid-vue3": "35.0.0-beta.20251215.1749",
+    "ag-grid-community": "35.0.0-beta.20251215.1749",
+    "ag-grid-enterprise": "35.0.0-beta.20251215.1749"
+  },
+  "devDependencies": {
+    "@types/node": "^22"
+  },
+  "version": "35.0.0-beta.20251215.1749"
+}

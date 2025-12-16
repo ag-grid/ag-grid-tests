@@ -1,6 +1,6 @@
 {
   "name": "test-project",
-  "version": "33.2.1-beta.20250407.2300",
+  "version": "35.0.0-beta.20251215.1749",
   "description": "A Quasar Project",
   "productName": "Quasar App",
   "author": "Marty Cochrane <49799843+marty0678@users.noreply.github.com>",
@@ -14,9 +14,9 @@
   },
   "dependencies": {
     "@quasar/extras": "^1.16.4",
-    "ag-grid-community": "33.2.1-beta.20250407.2300",
-    "ag-grid-enterprise": "33.2.1-beta.20250407.2300",
-    "ag-grid-vue3": "33.2.1-beta.20250407.2300",
+    "ag-grid-community": "35.0.0-beta.20251215.1749",
+    "ag-grid-enterprise": "35.0.0-beta.20251215.1749",
+    "ag-grid-vue3": "35.0.0-beta.20251215.1749",
     "quasar": "^2.14.3",
     "vue": "^3.5.11",
     "vue-router": "^4.0.0"

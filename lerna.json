@@ -4,7 +4,7 @@
   "packages": [
     "vue3/*"
   ],
-  "registry": "http://52.50.158.57:4873",
+  "registry": "https://registry.ag-grid.com/",
   "command": {
     "bootstrap": {
       "npmClientArgs": [

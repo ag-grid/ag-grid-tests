@@ -13,7 +13,7 @@ test('rowData is reactive', async ({ page }) => {
   await page.goto('http://127.0.0.1:8085/vue3/AG-13735-class-instances-rowdata/');
 
   const firstCell = page.locator('.ag-cell-value').first();
-  await firstCell.waitFor();
+  await firstCell.waitFor({ state: 'visible', timeout: 30000});
 
   await expect(page.getByRole('gridcell')).toHaveCount(3);
 

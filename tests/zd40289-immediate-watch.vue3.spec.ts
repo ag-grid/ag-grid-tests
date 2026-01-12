@@ -13,7 +13,7 @@ test('rowData reactivity', async ({ page }) => {
   await page.goto('http://127.0.0.1:8085/vue3/zd40289-immediate-watch/');
 
   const firstCell = page.locator('.ag-cell-value').first();
-  await firstCell.waitFor();
+  await firstCell.waitFor({ state: 'visible', timeout: 30000});
 
   // should start off with one row
   expect(await page.getByRole('gridcell')).toHaveCount(24);

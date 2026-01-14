@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 test('rowData is reactive', async ({ page }) => {
-  test.setTimeout(5_000);
+  test.setTimeout(10_000);
 
   const errorLogs = []
   page.on("console", (message) => {

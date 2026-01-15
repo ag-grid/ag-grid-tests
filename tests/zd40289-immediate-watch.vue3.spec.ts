@@ -20,7 +20,7 @@ test('rowData reactivity', async ({ page }) => {
   expect(await page.getByRole('gridcell').first().textContent()).toBe("Tesla");
   expect(await page.getByRole('gridcell').nth(1).textContent()).toBe("Model Y");
 
-  await page.waitForTimeout(100);
+  await page.waitForTimeout(500);
 
   expect(await page.getByRole('watch')).toHaveCount(0);
 

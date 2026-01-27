@@ -3,5 +3,21 @@ import vue from '@vitejs/plugin-vue'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue()]
+  plugins: [vue()],
+  optimizeDeps: { // 👈 optimizedeps
+    esbuildOptions: {
+      target: "esnext",
+      // Node.js global to browser globalThis
+      define: {
+        global: 'globalThis'
+      },
+      supported: {
+        bigint: true
+      },
+    }
+  },
+  build: {
+    target: ["esnext"], // 👈 build.target
+  },
+
 })

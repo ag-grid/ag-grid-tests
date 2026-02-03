@@ -22,7 +22,7 @@ const columnDefs = ref<ColDef<ROW_TYPE>[]>([
   { field: 'total' },
 ]);
 
-const alwaysPassFilter = (rowNode: IRowNode<ROW_TYPE[]>): boolean => {
+const alwaysPassFilter = (): boolean => {
   return true;
 }
 

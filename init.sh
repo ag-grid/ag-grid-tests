@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+npm run update-grid-deps
+
 for subDirectory in ./vue3/*;
 do
   cd $subDirectory

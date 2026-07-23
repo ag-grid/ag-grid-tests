@@ -1,6 +1,6 @@
 {
   "name": "simple-vue3-grid",
-  "version": "35.0.0-beta.20251215.1749",
+  "version": "36.0.0-beta.20260723.1118",
   "private": true,
   "type": "module",
   "scripts": {
@@ -14,8 +14,8 @@
     "type-check": "vue-tsc --build --force"
   },
   "dependencies": {
-    "ag-grid-community": "35.0.0-beta.20251215.1749",
-    "ag-grid-vue3": "35.0.0-beta.20251215.1749",
+    "ag-grid-community": "36.0.0-beta.20260723.1118",
+    "ag-grid-vue3": "36.0.0-beta.20260723.1118",
     "vue": "^3.5.0"
   },
   "devDependencies": {

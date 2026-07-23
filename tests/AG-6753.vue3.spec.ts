@@ -8,7 +8,7 @@ test('AG-6753 rowData is reactive', async ({ page }) => {
     }
   })
 
-  await page.goto('http://127.0.0.1:8085/vue3/AG-6753-reactive-rowdata-options/');
+  await page.goto('http://127.0.0.1:8085/vue3/AG-6753-reactive-rowdata-options/dist/');
 
   // should start off with one row
   await expect(page.getByRole('gridcell')).toHaveCount(1);

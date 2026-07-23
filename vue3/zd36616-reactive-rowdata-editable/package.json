@@ -1,15 +1,22 @@
 {
-  "name": "reactive-rowdata",
-  "version": "35.0.0-beta.20251215.1749",
-  "description": "",
-  "main": "main.js",
+  "name": "zd36616-reactive-rowdata-editable",
+  "private": true,
+  "version": "35.3.1",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "echo \"dummy build\""
+    "dev": "vite",
+    "build": "vite build --base=/vue3/zd36616-reactive-rowdata-editable/dist/",
+    "preview": "vite preview"
   },
   "dependencies": {
-    "ag-grid-community": "35.0.0-beta.20251215.1749",
-    "ag-grid-vue3": "35.0.0-beta.20251215.1749"
+    "ag-grid-community": "35.3.1",
+    "ag-grid-vue3": "35.3.1",
+    "vue": "^3.5.11"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.1.4",
+    "typescript": "^5.2.2",
+    "vite": "^5.4.8"
   },
   "keywords": [],
   "author": "",

@@ -3,7 +3,7 @@ import { test, expect } from '@playwright/test';
 test('reactive rowdata', async ({ page }) => {
   test.setTimeout(5_000);
 
-  await page.goto('http://localhost:8085/vue3/zd36616-reactive-rowdata-editable');
+  await page.goto('http://localhost:8085/vue3/zd36616-reactive-rowdata-editable/dist/');
 
   expect(await page.getByRole('gridcell').textContent()).toBe('2');
   expect(await page.getByLabel('value').textContent()).toBe('2');

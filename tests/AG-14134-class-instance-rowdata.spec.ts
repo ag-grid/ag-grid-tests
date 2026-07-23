@@ -3,7 +3,7 @@ import { test, expect } from '@playwright/test';
 test('reactive rowdata', async ({ page }) => {
   test.setTimeout(5_000);
 
-  await page.goto('http://localhost:8085/vue3/AG-14134-class-instance-rowdata/');
+  await page.goto('http://localhost:8085/vue3/AG-14134-class-instance-rowdata/dist/');
 
   await page.waitForTimeout(500);
 

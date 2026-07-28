@@ -20,5 +20,8 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "overrides": {
+    "rollup": "npm:@rollup/wasm-node@^4"
+  }
 }

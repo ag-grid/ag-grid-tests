@@ -17,5 +17,8 @@
     "vite": "^6.0.1",
     "vue-tsc": "^2.1.10"
   },
-  "version": "36.0.0-beta.20260723.1118"
+  "version": "36.0.0-beta.20260723.1118",
+  "overrides": {
+    "rollup": "npm:@rollup/wasm-node@^4"
+  }
 }

@@ -9,7 +9,7 @@
     "bootstrap": {
       "npmClientArgs": [
         "--no-package-lock",
-        "--force"
+        "--legacy-peer-deps"
       ]
     }
   }

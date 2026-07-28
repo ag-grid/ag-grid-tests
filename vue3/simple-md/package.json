@@ -35,5 +35,8 @@
     "vite-plugin-vue-devtools": "^7.3.1",
     "vitest": "^1.6.0",
     "vue-tsc": "^2.0.21"
+  },
+  "overrides": {
+    "rollup": "npm:@rollup/wasm-node@^4"
   }
 }

@@ -7,7 +7,7 @@ do
   cd $subDirectory
   cp ../../update.sh .
   rm -rf node_modules
-  npm i --no-package-lock --legacy-peer-deps --registry https://registry.ag-grid.com/
+  npm i --no-package-lock --legacy-peer-deps
   if [ $? -ne 0 ];
   then
     pwd

@@ -4,7 +4,6 @@
   "packages": [
     "vue3/*"
   ],
-  "registry": "https://registry.ag-grid.com/",
   "command": {
     "bootstrap": {
       "npmClientArgs": [

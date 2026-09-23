@@ -1,5 +1,5 @@
 <template>
-  <CustomGrid
+  <AgGridVue
     class="ag-theme-alpine"
     style="height: 500px; width: 97vw"
     :columnDefs="columnDefs.value"
@@ -16,6 +16,7 @@
 <script setup lang="ts">
 import { reactive, ref } from 'vue';
 import { createClient, provideClient } from '@urql/vue';
+import { AgGridVue } from 'ag-grid-vue3';
 import ChildGrid from './components/ChildGrid.vue';
 
 import { AllCommunityModule } from 'ag-grid-community';

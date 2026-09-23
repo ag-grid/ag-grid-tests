@@ -1,10 +1,10 @@
 <template>
-  <CustomGrid
+  <AgGridVue
     class="ag-theme-alpine"
     style="height: 500px; width: 97vw"
     :columnDefs="columnDefs.value"
     :defaultColDef="defaultColDef"
-    animateRows="true"
+    :animateRows="true"
     :rowData="data"
     @grid-ready="onGridReady"
   />
@@ -15,6 +15,7 @@ import {
   onMounted, reactive, Ref, ref, toRef,
 } from 'vue';
 import { GridApi } from 'ag-grid-community';
+import { AgGridVue } from 'ag-grid-vue3';
 import ButtonCell from './ButtonCell.vue';
 
 const props = defineProps({

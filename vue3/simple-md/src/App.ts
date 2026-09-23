@@ -4,6 +4,7 @@ import type {GridApi} from 'ag-grid-community';
 import { AllCommunityModule, ModuleRegistry } from 'ag-grid-community';
 import { AllEnterpriseModule } from 'ag-grid-enterprise';
 import { AgGridVue } from 'ag-grid-vue3';
+import type { Component } from 'vue';
 
 import DetailCellRenderer from './detailCellRendererVue.js';
 import  { data } from "./data"
@@ -31,7 +32,7 @@ export const App = {
     </div>
     `,
   components: {
-    'ag-grid-vue': AgGridVue,
+    'ag-grid-vue': AgGridVue as Component,
     myDetailCellRenderer: DetailCellRenderer,
   },
   data: function () {

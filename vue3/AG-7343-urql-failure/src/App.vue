@@ -5,7 +5,7 @@
     :columnDefs="columnDefs.value"
     :rowData="rowData"
     :defaultColDef="defaultColDef"
-    rowSelection="multiple"
+    :rowSelection="{ mode: 'multiRow', checkboxes: false, headerCheckbox: false, enableClickSelection: true }"
     @grid-ready="onGridReady"
     :masterDetail="true"
     :detailCellRenderer="ChildGrid"

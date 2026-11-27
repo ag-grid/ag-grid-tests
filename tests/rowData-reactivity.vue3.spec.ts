@@ -20,7 +20,7 @@ test('rowData reactivity', async ({ page }) => {
   expect(await page.getByRole('gridcell').first().textContent()).toBe("Tesla");
   expect(await page.getByRole('gridcell').locator('.priceIcon').count()).toBe(6);
 
-  await page.getByRole('button').click();
+  await page.getByRole('button', { name: 'click', exact: true }).click();
 
   await page.waitForTimeout(2000); // waits for 2 seconds
 

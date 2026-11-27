@@ -10,13 +10,13 @@ test('row data reactivity', async ({ page }) => {
   expect(await page.getByRole('gridcell').nth(8).textContent()).toBe("EC37B");
 
 
-  await page.locator('button').first().click();
+  await page.getByRole('button', { name: 'Update First Item' }).click();
   await page.waitForTimeout(50);
   expect(await page.getByRole('gridcell')).toHaveCount(35);
   expect(await page.getByRole('gridcell').nth(1).textContent()).toBe("First Update");
   expect(await page.getByRole('gridcell').nth(8).textContent()).toBe("EC37B");
 
-  await page.locator('button').last().click();
+  await page.getByRole('button', { name: 'Update Second Item' }).click();
   await page.waitForTimeout(50);
   expect(await page.getByRole('gridcell')).toHaveCount(35);
   expect(await page.getByRole('gridcell').nth(1).textContent()).toBe("First Update");

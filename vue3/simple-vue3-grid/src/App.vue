@@ -12,8 +12,6 @@
                      enableClickSelection: true,
                  }"
                style="height: 500px; width: 500px"
-               theme="legacy"
-               class="ag-theme-quartz"
                @grid-ready="gridReady"
                @cell-clicked="rowSelected"
   >
@@ -31,9 +29,6 @@ import PriceRenderer from "@/components/PriceRenderer.vue";
 import SimpleEditor from "@/components/SimpleEditor.vue";
 
 ModuleRegistry.registerModules([AllCommunityModule, ValidationModule]);
-
-import 'ag-grid-community/styles/ag-grid.css';
-import 'ag-grid-community/styles/ag-theme-quartz.css';
 
 const rowData = ref<any[]>([
   { make: "Tesla", model: "Model Y", price: 64950, electric: true },
